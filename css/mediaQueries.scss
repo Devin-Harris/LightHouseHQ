@@ -150,7 +150,7 @@
     }
 
     #Homepage {
-        height: 100vh;
+        height: 120vh;
         #text {
             width: 70%;
             top: 50%; left: 50%; transform: translate(-50%, -50%);
@@ -166,6 +166,9 @@
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) { 
+    #Homepage {
+        height: 130vh;
+    }
     #followPage {
         position: relative;
         top: 0; left: 0;
@@ -226,5 +229,7 @@
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { 
-
+    #Homepage {
+        height: 140vh;
+    }
  }
