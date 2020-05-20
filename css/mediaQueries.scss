@@ -166,6 +166,49 @@
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) { 
+    //Navigation Styling
+    nav {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100vw;
+        height: 5rem;
+        z-index: 5;
+        display: grid;
+        grid-template-columns: 5% 65% 30%;
+        place-items: center;
+        #navigation-logo {
+            height: inherit;
+            img {
+                height: 100%;
+                width: auto;
+            }
+        }
+        #links {
+            grid-column-start: 3;
+            font-family: 'Montserrat';
+            font-style: italic;
+            width: 40%;
+            ul {
+                display: flex;
+                list-style: none;
+                li {
+                    padding: 0 10%;
+                    a {
+                        color: white;
+                        transition: .3s;
+                        text-decoration: none;
+                        &:hover {
+                            color: $Purp;
+                        }
+                    }
+                }
+            }
+        }
+        #hamburger {
+            //No hamburger on desktop/Laptop view
+            display: none;
+        }
+    }
     #Homepage {
         height: 130vh;
     }
