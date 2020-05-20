@@ -1,0 +1,337 @@
+//Global Styling
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$Pink: #FED2DB;
+$MedPink: #7E3B48;
+$Purp: #2E1E33;
+
+$Gradient1: #8A2387;
+$Gradient2: #E94057;
+$Gradient3: #F27121;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+//Navigation Styling
+nav {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 5rem;
+    z-index: 5;
+    display: grid;
+    grid-template-columns: 5% 65% 30%;
+    place-items: center;
+    #navigation-logo {
+        height: inherit;
+        img {
+            height: 100%;
+            width: auto;
+        }
+    }
+    #links {
+        grid-column-start: 3;
+        font-family: 'Montserrat';
+        font-style: italic;
+        width: 40%;
+        ul {
+            display: flex;
+            list-style: none;
+            li {
+                padding: 0 10%;
+                a {
+                    color: white;
+                    transition: .3s;
+                    text-decoration: none;
+                    &:hover {
+                        color: $Purp;
+                    }
+                }
+            }
+        }
+    }
+    #hamburger {
+        //No hamburger on desktop/Laptop view
+        display: none;
+    }
+}
+
+#pagesWrapper {
+    position: absolute;
+    top: 0; left: 0;
+}
+
+//Homepage Styling
+#Homepage {
+    position: relative;
+    top: 0; left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('./../../assets/bground.jpg');
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0;
+        width: 100vw; height: 100vh;
+        background-color: rgba(0, 0, 0, 0.56);
+    }
+    #text {
+        font-family: 'Montserrat';
+        color: white;
+        width: 40%;
+        z-index: 5;
+        position: relative;
+        top: 45%; left: 40%; transform: translate(-50%, -50%);
+        h1 {
+            font-size: 450%;
+            font-style: italic;
+        }
+        h4 {
+            font-weight: 400;
+        }
+        #Squad-btn {
+            padding: 2%;
+            width: 40%;
+            margin: 2% 0;
+            font-family: 'Montserrat';
+            color: white;
+            font-style: italic;
+            font-weight: 600;
+            outline: none;
+            border: none;
+            transition: .3s;
+            border-radius: 50rem;
+            background: linear-gradient(45deg, $Gradient1, $Gradient2, $Gradient3);
+            &:hover {
+                 width: 50%;
+                 cursor: pointer;
+            }
+        }
+    }
+    #white-svg-up {
+        position: absolute;
+        bottom: 0; left: 0;
+        width: 100%;
+        z-index: 1;
+    }
+}
+
+#aboutpage {
+    position: relative;
+    top: 0; left: 0;
+    font-family: 'Montserrat';
+    color: $Purp;
+    text-align: center;
+    width: 50%;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        font-size: 400%;
+    }
+    p {
+        font-size: 150%;
+        text-align: left;
+    }
+}
+
+#Squadronpage {
+    position: relative;
+    top: 0; left: 0;
+    background-color: $MedPink;
+    font-family: 'Montserrat';
+    #white-svg-down {
+        position: relative;
+        top: 0; left: 0;
+        width: 100%;
+        z-index: 1;
+    }
+    h1 {
+        color: white;
+        font-size: 200%;
+        text-align: center;
+        padding: 15% 0 2% 0;
+    }
+    #topItems {
+        width: 60%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        place-items: center;
+        #simon, #don, #liam {
+            width: fit-content;
+            text-align: center;
+            #simonImage {
+                background-image: url('./../../assets/simon.jpg');
+            }
+            #donImage {
+                margin: 0 auto;
+                background-image: url('./../../assets/don.jpg');
+            }
+            #liamImage {
+                background-image: url('./../../assets/liam.jpg');
+            }
+            h2 {
+                color: white;
+                margin: 2% 0;
+            }
+            
+        }
+        
+    }
+    .image {
+        width: 25vmin;
+        height: 25vmin;
+        background-position: center;
+        background-size: cover;
+        border-radius: 50%;
+        margin: 2% 0;
+    }
+    .media {
+        color: $Pink;
+        i {
+            margin: 2% 5% 0 5%;
+            font-size: 200%;
+            transition: .3s;
+            &:hover {
+                color: $Purp;
+                cursor: pointer;
+            }
+        }
+    }
+    #bottomItems {
+        width: 40%;
+        margin: 5% auto 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-items: center;
+        padding-bottom: 15%;
+        #bean, #dev {
+            width: fit-content;
+            text-align: center;
+            #beanImage {
+                background-image: url('./../../assets/bean.jpg');
+            }
+            #devImage {
+                background-image: url('./../../assets/devin.jpg');
+            }
+            h2 {
+                color: white;
+                margin: 2% 0;
+            }
+        }
+    }
+    #purp-svg-up {
+        position: relative;
+        bottom: -10px; left: 0;
+        width: 100%;
+        z-index: 1;
+    }
+}
+
+#followPage {
+    position: relative;
+    top: 0; left: 0;
+    background-color: $Purp;
+    font-family: 'Montserrat';
+    padding-bottom: 25%;
+    h1 {
+        color: white;
+        padding: 15% 2% 0 2%;
+        margin: 0 auto 4% auto;
+        text-align: center;
+        font-size: 300%;
+    }
+    #followBtnsWrapper {
+        margin: 0 auto;
+        width: 50vmin;
+        height: 50vmin;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-items: center;
+        #instaFollow, #youtubeFollow, #discFollow {
+            background-color: white;
+            border: 2px solid #EFEFEF;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: .3s;
+            &:hover {
+                cursor: pointer;
+                background-color: $Gradient2;
+                h2 {
+                    color: $Pink;
+                }
+                i {
+                    color: $Pink;
+                }
+            }
+            i {
+                font-size: 350%;
+                transition: .3s;
+            }
+        }
+        #discFollow {
+            flex-direction: column;
+            grid-column: span 2;
+            h2 {
+                transition: .3s;
+            }
+            i {
+                font-size: 200%;
+            }
+        }
+    }
+}
+
+footer {
+    font-family: 'Montserrat';
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    place-items: center;
+    background-color: #1B111E;
+    color: white;
+    width: 100vw;
+    height: 10rem;
+    h1 {
+
+    }
+    #rightFooter {
+        grid-column-start: 3;
+        text-align: center;
+        p {
+
+        }
+        #bottomRightFooter {
+            display: flex;
+            justify-content: center;
+            a {
+                margin: 0 5%;
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+}

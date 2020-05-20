@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lighthouse HQ</title>
+
+    <link rel="stylesheet" href="./css/styles/main.css">
+    <link rel="stylesheet" href="./css/styles/mediaQueries.css">
+    <script src="https://kit.fontawesome.com/ce1e161f8c.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+    <script defer src="./js/main.js"></script>
+</head>
+<body>
+    
+    <nav>
+
+        <div id="navigation-logo">
+            <img src="./assets/logo.png" alt="Lighthouse Logo">
+        </div>
+
+        <div id="hamburger">
+            <div class="line T"></div>
+            <div class="line M"></div>
+            <div class="line B"></div>
+        </div>
+
+        <div id="links">
+            <ul>
+                <li><a href="#aboutpage">About</a></li>
+                <li><a href="#topItems">Squadron</a></li>
+                <li><a href="#followPage">Links</a></li>
+            </ul>
+        </div>
+
+        
+
+    </nav>
+
+<div id="pagesWrapper">
+
+    <div id="Homepage">
+
+        <div id="text">
+            <h1>Lighthouse HQ</h1>
+            <h4>Lighthouse HQ holds information over the lifestyle of Lighthouse Gang. Navigate to the about page to learn more and feel
+            free to follow us on our social media links below.</h4>
+            <button id="Squad-btn">Click to view the Squad</button>
+        </div>
+
+        <img id="white-svg-up" src="./assets/WhiteUp.svg" alt="SVG Divider">
+
+    </div>
+
+    <div id="aboutpage">
+
+        <h1>About</h1>
+        <p>The Lighthouse squad was formed in 2016 under the most hellish conditions you could think of, Highlands High School. The
+        gang adopted the name “Lighthouse” in 2018 from the Migos song BBO (Bad Bitches Only) Featuring 21 Savage. The
+        Lighthouse squad ventured to the shores of Longboat Key Florida in the spring of 2019, only to return to dominate the
+        2019 Annual Dart Wars competition. Currently, we are all attending different colleges, but have sights to return to
+        Florida in the summer of 2020 to fuck shit up. Looking for girl companions please contact us below.</p>
+
+    </div>
+
+    <div id="Squadronpage">
+
+        <img id="white-svg-down" src="./assets/WhiteDown.svg" alt="SVG Divider">
+        <h1>Squadron</h1>
+        <div id="topItems">
+            <div id="simon">
+                <div class="image" id="simonImage"></div>
+                <h2>Simon</h2>
+                <div class="media">
+                    <i onclick="SimonInsta()" class="fab fa-instagram"></i>
+                    <i onclick="SimonYoutube()" class="fab fa-youtube"></i>
+                    <i onclick="SimonTwitch()" class="fab fa-twitch"></i>
+                </div>
+            </div>
+
+            <div id="don">
+                <div class="image" id="donImage"></div>
+                <h2>Donovan</h2>
+                <div class="media">
+                    <i onclick="DonInsta1()" class="fab fa-instagram"></i>
+                    <i onclick="DonYoutube()" class="fab fa-youtube"></i>
+                    <i onclick="DonInsta2()" class="fab fa-instagram"></i>
+                </div>
+            </div>
+
+            <div id="liam">
+                <div class="image" id="liamImage"></div>
+                <h2>Liam</h2>
+                <div class="media">
+                    <i onclick="LiamInsta()" class="fab fa-instagram"></i>
+                    <i onclick="LiamYoutube()" class="fab fa-youtube"></i>
+                    <i onclick="LiamTwitch()" class="fab fa-twitch"></i>
+                </div>
+            </div>
+        </div>
+
+        <div id="bottomItems">
+            <div id="bean">
+                <div class="image" id="beanImage"></div>
+                <h2>Bean</h2>
+                <div class="media">
+                    <i onclick="BeanInsta()" class="fab fa-instagram"></i>
+                    <i onclick="BeanSnap()" class="fab fa-snapchat-ghost"></i>
+                    <i onclick="BeanTwitter()" class="fab fa-twitter"></i>
+                </div>
+            </div>
+
+            <div id="dev">
+                <div class="image" id="devImage"></div>
+                <h2>Devin</h2>
+                <div class="media">
+                    <i onclick="DevinInsta()" class="fab fa-instagram"></i>
+                    <i onclick="DevinYoutube()" class="fab fa-youtube"></i>
+                    <i onclick="DevinWeb()" class="fas fa-server"></i>
+                </div>
+            </div>
+        </div>
+
+        <img id="purp-svg-up" src="./assets/PurpUp.svg" alt="SVG Divider">
+
+    </div>
+
+    <div id="followPage">
+
+        <h1>Follow Us!</h1>
+
+        <div id="followBtnsWrapper">
+            <div id="instaFollow">
+                <i class="fab fa-instagram"></i>
+            </div>
+            <div id="youtubeFollow">
+                <i class="fab fa-youtube"></i>
+            </div>
+            <div onclick="DiscLink()" id="discFollow">
+                <h2>Join our discord.</h2>
+                <i class="fab fa-discord"></i>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <h1>Lighthouse Gang</h1>
+
+        <div id="rightFooter">
+            <p>Copyright &copy; Lighthouse Gang | 2020</p>
+            <div id="bottomRightFooter">
+                <a href="#">Top</a>
+                <a href="#topItems">Contact</a>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,229 @@
+
+@import './main';
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 0px) { 
+    nav {
+        width: 100vw;
+        height: 5rem;
+        grid-template-columns: 25% 45% 30%;
+        #links {
+            display: none;
+            ul {
+                display: flex;
+                justify-content: space-evenly;
+                li {
+                    padding: 0;
+                }
+            }
+        }
+        #hamburger {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            grid-column-start: 3;
+            .line {
+                width: 45%;
+                height: .3rem;
+                background-color: white;
+                margin: 3% 0;
+                border-radius: 50rem;
+            }
+        }
+    }
+
+    #Homepage {
+        height: 70vh;
+        background-position: right;
+        &:before {
+            height: 100%;
+        }
+        #text {
+            width: 70%;
+            top: 50%; left: 50%; transform: translate(-50%, -50%);
+            h1 {
+                font-size: 2em;
+            }
+            h4 {
+                font-size: .7em;
+            }
+            #Squad-btn {
+                width: 70%;
+                font-size: 60%;
+            }
+        }
+    }
+
+    #aboutpage {
+        height: 60vh;
+        width: 80%;
+        h1 {
+            font-size: 200%;
+        }
+        p {
+            font-size: 100%;
+        }
+    }
+
+    #Squadronpage {
+        #topItems {
+            grid-template-columns: 1fr;
+            #simon, #don, #liam {
+                margin: 5% 0;
+            }
+        }
+        #bottomItems {
+            grid-template-columns: 1fr;
+            #bean, #dev {
+                margin: 5% 0;
+            }
+        }
+        .media {
+            width: 100%;
+            i {
+                margin: 2% 3% 0 3%;
+                font-size: 120%;
+            }
+        }
+    }
+
+    #followPage {
+        h1 {
+            font-size: 200%;
+        }
+        #followBtnsWrapper {
+            height: fit-content;
+            grid-template-columns: 1fr;
+            #instaFollow, #youtubeFollow, #discFollow {
+                width: 50vmin;
+                height: 50vmin;
+            }
+            #discFollow {
+                grid-column: span 1;
+                text-align: center;
+            }
+        }
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h1 {
+            font-size: 100%;
+            margin: 3%;
+        }
+        #rightFooter {
+            grid-column-start: 2;
+        }
+    }
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+    nav {
+        width: 100vw;
+        height: 5rem;
+        grid-template-columns: 15% 65% 20%;
+        #hamburger {
+            height: 100%;
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            grid-column-start: 3;
+            .line {
+                width: 45%;
+                height: .3rem;
+                background-color: white;
+                margin: 3% 0;
+                border-radius: 50rem;
+            }
+        }
+    }
+
+    #Homepage {
+        #text {
+            width: 70%;
+            top: 50%; left: 50%; transform: translate(-50%, -50%);
+            h1 {
+                font-size: 3em;
+            }
+            h4 {
+                font-size: 1em;
+            }
+        }
+    }
+ }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { 
+    #followPage {
+        position: relative;
+        top: 0; left: 0;
+        background-color: $Purp;
+        font-family: 'Montserrat';
+        padding-bottom: 25%;
+        h1 {
+            color: white;
+            padding: 15% 2% 0 2%;
+            margin: 0 auto 4% auto;
+            text-align: center;
+            font-size: 300%;
+        }
+        #followBtnsWrapper {
+            margin: 0 auto;
+            width: 50vmin;
+            height: 50vmin;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            place-items: center;
+            #instaFollow, #youtubeFollow, #discFollow {
+                background-color: white;
+                border: 2px solid #EFEFEF;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: .3s;
+                &:hover {
+                    cursor: pointer;
+                    background-color: $Gradient2;
+                    h2 {
+                        color: $Pink;
+                    }
+                    i {
+                        color: $Pink;
+                    }
+                }
+                i {
+                    font-size: 350%;
+                    transition: .3s;
+                }
+            }
+            #discFollow {
+                flex-direction: column;
+                grid-column: span 2;
+                h2 {
+                    transition: .3s;
+                }
+                i {
+                    font-size: 200%;
+                }
+            }
+        }
+    }
+ }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+
+ }
