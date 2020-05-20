@@ -274,6 +274,100 @@
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { 
     #Homepage {
-        height: 110vh;
+        height: 130vh;
     }
+
+    #Squadronpage {
+    position: relative;
+    top: 0; left: 0;
+    background-color: $MedPink;
+    font-family: 'Montserrat';
+    #white-svg-down {
+        position: relative;
+        top: 0; left: 0;
+        width: 100%;
+        z-index: 1;
+    }
+    h1 {
+        color: white;
+        font-size: 200%;
+        text-align: center;
+        padding: 15% 0 2% 0;
+    }
+    #topItems {
+        width: 60%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        place-items: center;
+        #simon, #don, #liam {
+            width: fit-content;
+            text-align: center;
+            #simonImage {
+                background-image: url('./../../assets/simon.jpg');
+            }
+            #donImage {
+                margin: 0 auto;
+                background-image: url('./../../assets/don.jpg');
+            }
+            #liamImage {
+                background-image: url('./../../assets/liam.jpg');
+            }
+            h2 {
+                color: white;
+                margin: 2% 0;
+            }
+            
+        }
+        
+    }
+    .image {
+        width: 25vmin;
+        height: 25vmin;
+        background-position: center;
+        background-size: cover;
+        border-radius: 50%;
+        margin: 2% 0;
+    }
+    .media {
+        color: $Pink;
+        i {
+            margin: 2% 5% 0 5%;
+            font-size: 200%;
+            transition: .3s;
+            &:hover {
+                color: $Purp;
+                cursor: pointer;
+            }
+        }
+    }
+    #bottomItems {
+        width: 40%;
+        margin: 5% auto 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-items: center;
+        padding-bottom: 15%;
+        #bean, #dev {
+            width: fit-content;
+            text-align: center;
+            #beanImage {
+                background-image: url('./../../assets/bean.jpg');
+            }
+            #devImage {
+                background-image: url('./../../assets/devin.jpg');
+            }
+            h2 {
+                color: white;
+                margin: 2% 0;
+            }
+        }
+    }
+    #purp-svg-up {
+        position: relative;
+        bottom: -10px; left: 0;
+        width: 100%;
+        z-index: 1;
+    }
+}
  }
